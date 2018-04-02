@@ -1,0 +1,3 @@
+Estou enviando os dois codigos que tentei,primeiro eu tentei fazer em c mais não consegui depois eu fiz em c++ e deu certo.Quando estava fazendo em c pedi ajuda a um amigo mais como ja tinha uma ideia e você explicou a atividade consegui fazer só.
+
+a promeira semana foi meio complicada por que não estava com o ubuntu e demorei uma pouco para resolver o problema de enviar os trabalho e de instalar o qt.Acho que vai ser meio dificiu para mim por que é uma nova linguagem e estou trabalhando agora.

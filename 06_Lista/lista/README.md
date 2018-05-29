@@ -1,0 +1,1 @@
+Nessa atividade fiz o possivel para não pedir ajuda e tentei fazer só.Tive dificuldade para ajeitar as funções que estavam feitas.A parte que me deu mais trabalho foi no remove e no inserir ordenado.

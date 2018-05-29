@@ -25,18 +25,22 @@ struct Ambiente{
         return ss.str();
     }
 };
-struct Lista{
-  list<Ambiente> lista;
-};
-
 int main()
+
+//ajeitar os ponteiros
+
 {
-    Lista lista;
     Ambiente amb;
     amb.texto.push_back('a');
     amb.texto.push_back('m');
     amb.texto.push_back('o');
     amb.texto.push_back('r');
+
+    list<Ambiente> aux;
+    list<Ambiente>::iterator caux;
+
+    aux.push_back(amb);
+    caux = aux.begin();
 
     sf::RenderWindow janela(sf::VideoMode(800, 600), "Janela");
 
@@ -48,46 +52,49 @@ int main()
                 janela.close();
             if(event.type == sf::Event::KeyPressed){
                 if(event.key.code == sf::Keyboard::Z){
-                    if(event.key.control){
+                    if(event.key.control)
                         cout << "control z" << endl;
-                        lista.pop_back();
+                    if(atual!=la.begin())
+                        atual--;
                     }
                 }
                 else if(event.key.code == sf::Keyboard::R){
-                    if(event.key.control)
+                    if(event.key.control);
                         cout << "control r" << endl;
+                    if(atual!=la.end())
+                        atual++;
                 }
                 else if((event.key.code >= sf::Keyboard::A) &&
                    (event.key.code <= sf::Keyboard::Z)){
                     char tecla = (event.key.code - sf::Keyboard::A) + 'a';
-                    cout << tecla << endl;
-                    Ambiente aux = this.amb;
-                    lista.push_back(aux);
+                    aux.erase(++caux);
+                    aux.push_back(*caux);
+                    caux == --aux.end();
+                    caux->texto.insert(caux->cursor, tecla);
                 }
                 else if((event.key.code == sf::Keyboard::Space)){
-                    cout << "espaco" << endl;
-                    amb.texto.insert(amb.cursor,' ');
-                    Ambiente aux = this.amb;
-                    lista.push_back(aux);
+                        caux->cursor = caux->texto.insert(caux->cursor,' ');
+                        aux.push_back(amb);
                 }
                 else if(event.key.code == sf::Keyboard::BackSpace){
-                    cout << "backspace" << endl;
-                    cursor--;
-                    amb.texto.erase(amb.texto);
-                    Ambiente aux = this.amb;
-                    lista.push_back(aux);
+                    if(amb.cursor != amb.texto.begin()){
+                        amb.cursor = amb.texto.erase(--amb.cursor);
+                        lista.push_back(amb);
+                    }
                 }
                 else if(event.key.code == sf::Keyboard::Delete){
-                    cout << "delete" << endl;
-                    cursor++;
-                    amb.texto.erase(amb.texto);
-                    Ambiente aux = this.amb;
-                    lista.push_back(aux);
+                    if(amb.cursor != amb.texto.end()){
+                        amb.cursor = amb.texto.erase(amb.cursor);
+                        aux.push_back(amb);
+                    }
                 }
                 else if(event.key.code == sf::Keyboard::Left){
-                    amb.cursor--;
+                    if(amb.cursor != amb.texto.begin()){
+                        amb.cursor--;
+                    }
                 }
                 else if(event.key.code == sf::Keyboard::Right){
+                    if(amb.cursor != amb.texto.end()){
                     amb.cursor++;
                 }
             }

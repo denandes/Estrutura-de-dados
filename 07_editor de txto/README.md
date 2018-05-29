@@ -1,0 +1,2 @@
+Professor tentei fazer toda a atividade so usando lista mais não deu certo mais vou enviar o que eu tentei fazer.
+Tentei criar uma outra lista e a cada ação do usuario eu guardo aquele ambiente na nova lista que tem um lista de ambientes mais desse jeito acho que so da pra fazer com "ctrl z" não sei como faço o "ctrl r".Depois disso teve a explicação e consegui fazer so falta atualizar os ponteiros.

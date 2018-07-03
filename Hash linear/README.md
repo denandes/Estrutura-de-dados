@@ -1,0 +1,1 @@
+Nessa atividade do hash eu pedi ajuda a um amigo (assim como na de arvore), ele fez junto comigo o find eu programando e ele me ajudando e deixou o remove e inserir para eu fazer so que depois eu fui da uma olhada no visualgo e fiquei com vontade de fazer o linear e consegui sem a ajuda do meu amigo.

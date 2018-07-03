@@ -1,0 +1,1 @@
+Nessa atividade do banco fiz o codigo do jeito que tinha no git so que não conseguia testar depois fiz no atualizado.O codigo esta rodando mais não sei como mostrar a fila, ja tentei fazer uma função para poder mostrar mais não consegui.
